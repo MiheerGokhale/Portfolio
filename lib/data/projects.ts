@@ -20,12 +20,18 @@ export const projects:ProjectProps[] = [
     },
     {
         title: "Portfolio",
-        description: "This portfolio website is a sleek, showcasing my projects, skills, and achievements with a modern UI and smooth animations.",
+        description: "A modern and responsive personal portfolio built with Next.js and Tailwind CSS.",
         image: "/portfolio.png",
         stacks: [
             {name: "Next.js"}, {name: "Tailwind"}, {name: "Motion"}
         ],
-        live: "",
+        contents: [
+            "Designed and developed a sleek, responsive portfolio website to showcase projects, skills, and achievements.",
+            "Implemented smooth animations and transitions using Framer Motion for an engaging user experience.",
+            "Structured the project with Next.js for optimized performance, SEO, and scalability.",
+            "Built reusable UI components with Tailwind CSS, ensuring consistency and a clean modern design."
+        ],
+        live: "https://portfolio-xi-one-vxnd3j77c7.vercel.app/",
         github: "",
         link: "/"
     }

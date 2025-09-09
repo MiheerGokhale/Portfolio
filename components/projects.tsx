@@ -6,14 +6,13 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import { Stack, Stacks } from "@/components/tech-stack";
-import { CustomLink } from "./link";
 import { projects } from "@/lib/data/projects";
 import { useState } from "react";
 import { CardLink, DetailsHeading, DetialsCardContent, DetialsCardDescription, DetialsCardImage, DetialsCardLayout } from "./details";
 import { easeInOut, motion } from "motion/react";
 import { useOutSideClick } from "@/lib/hooks";
 
-export const Projects = ({className, href}: {className?: string, href: string}) => {
+export const Projects = ({className}: {className?: string, href: string}) => {
     const [current, setCurrent] = useState<ProjectProps | null>(null);
     const ref = useOutSideClick<HTMLDivElement>(() => setCurrent(null));
     
@@ -114,13 +113,12 @@ export const Projects = ({className, href}: {className?: string, href: string}) 
                     </DetialsCardLayout>
                 )}
 
-            <div className="w-7/8 md:w-1/2 flex flex-col items-start">
-                <h2 className="text-xl font-bold py-2 shadow-sm">Projects</h2>
-                <div className="text-neutral-400 flex justify-between w-full text-sm">
-                    <p className="">Selected work with a focus on shipping.</p>
-                    <CustomLink name="Details" href={href} className="
-                    hover:text-white w-24 md:w-fit"><ArrowRight className="h-4 w-4" /></CustomLink>
-                </div>
+            <div className="text-neutral-400 flex justify-between w-7/8 md:w-1/2">
+                    <p className="text-xl font-bold py-2 shadow-sm text-white">Projects</p>
+                    <Link href={"/projects"}
+                        className="flex items-center hover:text-white text-sm"
+                        >View all <ArrowRight />
+                    </Link>
             </div>
              <div className={cn("pt-8 w-7/8 grid grid-cols-1 gap-y-4",
                 "md:w-1/2 md:grid-cols-2 md:gap-x-4"

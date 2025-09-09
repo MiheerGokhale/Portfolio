@@ -1,7 +1,7 @@
 import { Container } from '@/components/container';
 import { Social } from '@/components/social';
 import { cn } from '@/lib/utils';
-import  {Moon} from 'lucide-react';
+// import  {Moon} from 'lucide-react';
 
 export const Navbar = ({className}: {className? : string}) => {
   return (
@@ -16,7 +16,7 @@ export const Navbar = ({className}: {className? : string}) => {
      </div>
      <div className='flex justify-center items-center w-3/4 md:w-1/8'>
         <Social className='hover:text-white transition-all duration-200 ease-in-out' />
-        <Moon className='ml-6 text-white' size={24} />
+        {/* <Moon className='ml-6 text-white' size={24} /> */}
      </div>
      <div className='min-w-4xl mx-auto border border-neutral-800'></div>
     </Container>

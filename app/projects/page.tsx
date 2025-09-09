@@ -73,22 +73,27 @@ const ProjectsHome = () => {
 
                         <DetailsHeading>
                             <motion.h2
-                                className="font-bold text-xl" 
+                                className="font-bold text-xl flex items-center gap-x-2" 
                                 layoutId={`project-title-${current.title}`}
                                 transition={{
                                     ease: easeInOut
                                 }}
-                            >{current.title}</motion.h2>
+                            >{current.title}
+                                {current.github != "" && 
+                                (
                                 <Link href={current.github} target="_blank"
                                     className="flex justify-center items-center text-neutral-400 hover:text-cyan-400"
                                  >
                                     <GithubIcon height={18} width={18} className="" />
                                 </Link>
+
+                                )}
                                 <Link href={current.live} target="_blank"
                                     className="flex justify-center items-center text-neutral-400 hover:text-cyan-400"
                                 >
                                     <ExternalLink height={18} width={18} className="" />
                                 </Link>
+                            </motion.h2>
                             <CardLink className="hover:text-white">
                                 Details
                                 <ArrowRight className="h-4 w-4" />

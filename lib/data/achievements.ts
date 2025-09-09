@@ -1,5 +1,5 @@
 import { AchievementCardProps } from "@/components/achievements";
-import { Award } from "lucide-react";
+import { Award, Code } from "lucide-react";
 
 export const achievements: AchievementCardProps[] = [
     {
@@ -18,5 +18,21 @@ export const achievements: AchievementCardProps[] = [
             }
         ]
     },
+    {
+        times: "220+",
+        title: "Problem Solving",
+        Icon: Code,
+        description: "",
+        achievements: [
+            {
+                title: "Solve more than 220+ question in leetcode.",
+                link: "https://leetcode.com/u/Miheer_Gokhale/"
+            },
+            {
+                title: "Highest contest rating of 1459",
+                link: "https://leetcode.com/u/Miheer_Gokhale/"
+            }
+        ]
+    }
     
 ];

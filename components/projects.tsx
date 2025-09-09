@@ -182,7 +182,7 @@ export const Project = ({title, description,image, stacks, live, link, github, o
 export const Content = ({content}: {content: string}) => {
     return (
         <div className="flex p-2 w-full text-sm items-center">
-                <div className="w-2 h-2  bg-black rounded-full mr-2"></div>
+                <div className="w-2 h-2  bg-neutral-400 rounded-full mr-2"></div>
                 <span className="ml-2 w-7/8 flex flex-wrap">{content}</span>
         </div>
     )

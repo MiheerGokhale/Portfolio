@@ -11,8 +11,8 @@ export default function Home() {
     <div className="min-h-screen pt-40  bg-neutral-900 text-white ">
       <Hero />
       <Projects href="/projects" />
-      <Blogs />
-      <Experiences />
+      {/* <Blogs /> */}
+      {/* <Experiences /> */}
       <Achievements />
       <Contact />
       <Copyright />

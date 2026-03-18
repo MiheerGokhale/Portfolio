@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/navbar';
 import { GoogleTagManager } from '@next/third-parties/google';
+import Script from 'next/script';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -26,9 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <script>
-        window.dataLayer = window.dataLayer || [];
-      </script>
+      <head>
+        <Script id="gtm-datalayer" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+          `}
+        </Script>
+      </head>
 
       <GoogleTagManager gtmId='GTM-MGKFZ9L7' />
       <body

@@ -163,7 +163,13 @@ export const Project = ({title, description,image, stacks, live, link, github, o
                 </Link>
                 )
                 }
-                <Link href={live} target="_blank"
+                <Link onClick={() => {
+                    window.dataLayer?.push({
+                        event: "project_click",
+                        url: live,
+                        name: title
+                    })
+                }} href={live} target="_blank"
                     className="flex justify-center items-center text-neutral-400 hover:text-cyan-400"
                 >
                     <ExternalLink height={18} width={18} className="" />

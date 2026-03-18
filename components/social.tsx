@@ -79,7 +79,13 @@ export const Social = ({className}: {className?: string}) => {
                 return (
                     <Tooltip key={`Icon-${label}`}>
                         <TooltipTrigger>
-                            <Link  href={href} aria-label={label} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition">
+                            <Link onClick={() => {
+                                window.dataLayer?.push({
+                                    event: "social_click",
+                                    url: href,
+                                    name: label
+                                })
+                            }}  href={href} aria-label={label} target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-white transition">
                                 <Icon className='size-5' />
                             </Link>
                         </TooltipTrigger>

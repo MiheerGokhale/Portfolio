@@ -26,6 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <script>
+        window.dataLayer = window.dataLayer || [];
+      </script>
+
       <GoogleTagManager gtmId='GTM-MGKFZ9L7' />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
